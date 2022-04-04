@@ -1,15 +1,12 @@
 @font-face {
-	font-family: "Linux Libertine";
-	src: url("fonts/LinLibertine_RZ.woff") format('woff');
-}
-
-@font-face {
-  font-family: "Petiote";
-  src: url("fonts/petiote.ttf") format("ttf");
+  font-family: "munro";
+  src: url("fonts/munro.ttf");
+  src: url("fonts/munro-narrow.ttf");
+  src: url("fonts/munro-small.ttf");
 }
 
 html, body {
-	font-family: "Petiote";
+	font-family: "munro";
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
 	background-image: url("images/backgrounds/bg.jpg");
