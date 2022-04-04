@@ -16,6 +16,11 @@ body {
 	text-align: center;
 }
 
+.border {
+	height: 55px;
+	background-image: url("../images/blinkies/renda.gif");
+}
+
 .center-text {
 }
 
