@@ -29,3 +29,21 @@ body {
 .buttonstime {
 	margin-top:20px;
 }
+
+a:link {
+  color: brown;
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: white;
+}
+
+a:active {
+  color: white;
+}
