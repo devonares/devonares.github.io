@@ -1,0 +1,27 @@
+@font-face {
+  font-family: "munro";
+  src: url("../fonts/munro.ttf");
+  src: url("../fonts/munro-narrow.ttf");
+  src: url("../fonts/munro-small.ttf");
+}
+
+body {
+	font-family: "munro";
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	background-color: rgba(76, 175, 80, 0.1);
+	background-image: url("../images/backgrounds/bg2.png");
+	background-repeat: repeat;
+	overflow-y: scroll;
+	text-align: center;
+}
+
+.center-text {
+}
+
+.updatelog {
+}
+
+.updateP {
+	font-size: 14px;
+}
