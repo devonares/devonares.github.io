@@ -1,0 +1,20 @@
+@font-face {
+  font-family: "munro";
+  src: url("../fonts/munro.ttf");
+  src: url("../fonts/munro-narrow.ttf");
+  src: url("../fonts/munro-small.ttf");
+}
+
+
+html, body {
+	font-family: "munro";
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	background-image: url("../images/backgrounds/starsss.png");
+	background-repeat: repeat;
+
+}
+
+body span{
+	color: white;
+}

@@ -1,0 +1,341 @@
+        <style>
+		
+		@font-face {
+		font-family: "munro";
+		src: url("../fonts/munro.ttf");
+		src: url("../fonts/munro-narrow.ttf");
+		src: url("../fonts/munro-small.ttf");
+		}
+		
+            :root {
+                /* These variables exist so you can make quick and simple style changes without much CSS knowledge */
+
+                /* applies to all areas */
+                --font-family: "munro";
+                --font-size: 14px;
+                --line-height: 1.3em;
+                --font-color: white;
+                --link-color: coral;
+                --link-text-decoration: none;
+
+                /* main content (between sidebars) */
+                --content-padding: 25px;
+                --content-bg-color: black;
+
+                /* header */
+                --header-height: 80px;
+                --header-background: url('../images/napocatbg2.png');
+                --header-margin-bottom: 0px;
+
+                /* sidebar */
+                --sidebar-margin: 10px;
+                --sidebar-width: 150px;
+                --sidebar-padding: 15px;
+                --sidebar-bg-color: black;
+
+                /* footer */
+                --footer-height: 30px;
+                --footer-bg-color: black;
+
+                /* navbar */
+                --navitems-alignment: left;
+                --space-between-navitems: 20px;
+                --navbar-margin-bottom: 10px;
+                --nav-bg-color: ;
+
+                /* container */
+                --container-width: 800px;
+                --container-bg-color:;
+
+                /* controls the gap between the content and the footer */
+                --row-gap: 5px;
+
+                /* To add scrollbars to your sidebars, just make the height a px value and change overflow to 'auto' */
+
+                --sidebar-height: 600px;
+                --sidebar-overflow: hidden;
+                --background-color: #3DA2B7;
+            }
+
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+                background-color: var(--background-color);
+				background-image: url("../images/backgrounds/warmgifbg.gif");
+				background-repeat: no-repeat;
+				background-size: 100%;
+                font-family: var(--font-family);
+                font-size: var(--font-size);
+                line-height: var(--line-height);
+                color: var(--font-color);
+            }
+
+            body a {
+                color: var(--link-color);
+                font-weight: bold;
+                text-decoration: var(--link-text-decoration);
+            }
+
+            #main-container {
+                max-width: var(--container-width);
+                margin: 0 auto;
+                background-color: var(--container-bg-color);
+            }
+
+            .flex {
+                display: flex;
+                margin-bottom: var(--row-gap);
+            }
+
+            .content-wrap {
+                margin-top: var(--content-margin-top);
+            }
+
+            #content-container {
+                width: 60%;
+                margin-bottom: var(--row-gap);
+                background-color: var(--content-bg-color);
+				border: 1px solid white;
+            }
+
+            #left-sidebar {
+                width: var(--sidebar-width);
+                margin-right: var(--sidebar-margin);
+                margin-bottom: var(--row-gap);
+                height: var(--sidebar-height);
+                overflow: var(--sidebar-overflow);
+                background-color: var(--sidebar-bg-color);
+				border: 1px solid white;
+            }
+
+            #right-sidebar {
+                width: var(--sidebar-width);
+                margin-left: var(--sidebar-margin);
+                margin-bottom: var(--row-gap);
+                height: var(--sidebar-height);
+                overflow: var(--sidebar-overflow);
+                background-color: var(--sidebar-bg-color);
+            }
+
+            #header-contained {
+                height: var(--header-height);
+                margin-bottom: var(--header-margin-bottom);
+                background-image: var(--header-background);
+                background-position: center center;
+            }
+
+            #footer {
+                height: var(--footer-height);
+                text-align: center;
+                color: var(--font-color);
+                background-color: var(--footer-bg-color);
+            }
+
+            #header-full {
+                display: none;
+                height: var(--header-height);
+                margin-bottom: var(--header-margin-bottom);
+                background-image: var(--header-background);
+                background-position: center center;
+            }
+
+            #navbar-contained {
+                margin-bottom: var(--row-gap)
+            }
+
+            #navbar-full {
+                display: none;
+            }
+
+            .nav {
+                margin-left: 0;
+                text-align: var(--navitems-alignment);
+                margin-top: 0;
+                margin-bottom: var(--navbar-margin-bottom);
+                padding-top: 1em;
+                padding-bottom: 1em;
+                background-color: var(--nav-bg-color);
+            }
+
+            .nav li {
+                display: inline-block;
+                padding-right: var(--space-between-navitems);
+				font-size: 18;
+				padding-bottom: var(--space-between-navitems);
+            }
+
+            .wrapper {
+                padding: var(--content-padding);
+                padding-top: var(--sidebar-padding);
+            }
+
+            .sidebar-wrapper {
+                padding: var(--sidebar-padding);
+                height: var(--sidebar-height);
+                overflow: var(--sidebar-overflow);
+            }
+
+            .footer-wrapper {
+                padding: 5px;
+            }
+			
+			#left-sidebar li {
+				list-style-type: none;
+			}
+			
+			#main-container img{
+			}
+
+            /* To keep your site RESPONSIVE, make sure this variable matches the width for --container-width UNLESS --container-width is 100% - if it's 100%, you'll need to manually input a breakpoint. */
+            @media only screen and (max-width: 800px) {
+                .flex {
+                    flex-wrap: wrap;
+                }
+
+                #left-sidebar {
+                    width: 100%;
+					height: 50px;
+                    display: block;
+                    order: 2;
+                    margin-right: 0;
+                    margin-bottom: 10px;
+                }
+				
+				.sidebar-wrapper{
+					padding:0;
+				}
+
+                #right-sidebar {
+                    width: 100%;
+                    display: block;
+                    order: 3;
+                    margin-left: 0;
+                }
+
+                #content-container {
+                    width: 100%;
+					height: 500px;
+                    display: block;
+                    order: 1;
+                    margin-bottom: 10px;
+                }
+				
+				#main-container img{
+					display: none;
+				}
+				
+				html, body {
+				background-repeat: repeat;
+				}
+        </style>
+		
+		<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Napo time</title>
+		<link href="#" rel="stylesheet" type="text/css" media="all">
+		
+		<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+		<link rel="manifest" href="../site.webmanifest">
+		<link rel="mask-icon" href="../safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">
+		</head>
+<body>		
+
+<div>
+	<marquee behavior=scroll direction=down scrollamount=4 scrolldelay=23 height=619 style='position:absolute; left:45%; top:119px; width:17; height:619px;'><img src=http://dl10.glitter-graphics.net/pub/72/72870cmxjrny8yc.gif border=0></marquee>
+<marquee behavior=scroll direction=down scrollamount=3 scrolldelay=31 height=677 style='position:absolute; left:79%; top:57px; width:17; height:677px;'><img src=http://dl10.glitter-graphics.net/pub/72/72870cmxjrny8yc.gif border=0></marquee>
+<marquee behavior=scroll direction=down scrollamount=2 scrolldelay=20 height=533 style='position:absolute; left:13%; top:75px; width:17; height:533px;'><img src=http://dl10.glitter-graphics.net/pub/72/72870cmxjrny8yc.gif border=0></marquee>
+<marquee behavior=scroll direction=down scrollamount=3 scrolldelay=24 height=553 style='position:absolute; left:76%; top:122px; width:17; height:553px;'><img src=http://dl10.glitter-graphics.net/pub/72/72870cmxjrny8yc.gif border=0></marquee>
+<marquee behavior=scroll direction=down scrollamount=3 scrolldelay=48 height=550 style='position:absolute; left:35%; top:153px; width:17; height:550px;'><img src=http://dl10.glitter-graphics.net/pub/72/72870cmxjrny8yc.gif border=0></marquee>
+<marquee behavior=scroll direction=down scrollamount=4 scrolldelay=27 height=605 style='position:absolute; left:11%; top:179px; width:17; height:605px;'><img src=http://dl10.glitter-graphics.net/pub/72/72870cmxjrny8yc.gif border=0></marquee>
+<marquee behavior=scroll direction=down scrollamount=1 scrolldelay=20 height=566 style='position:absolute; left:37%; top:50px; width:17; height:566px;'><img src=http://dl10.glitter-graphics.net/pub/72/72870cmxjrny8yc.gif border=0></marquee>
+<marquee behavior=scroll direction=down scrollamount=2 scrolldelay=38 height=541 style='position:absolute; left:6%; top:128px; width:17; height:541px;'><img src=http://dl10.glitter-graphics.net/pub/72/72870cmxjrny8yc.gif border=0></marquee>
+<marquee behavior=scroll direction=down scrollamount=2 scrolldelay=15 height=665 style='position:absolute; left:41%; top:185px; width:17; height:665px;'><img src=http://dl10.glitter-graphics.net/pub/72/72870cmxjrny8yc.gif border=0></marquee>
+<marquee behavior=scroll direction=down scrollamount=4 scrolldelay=31 height=691 style='position:absolute; left:84%; top:118px; width:17; height:691px;'><img src=http://dl10.glitter-graphics.net/pub/72/72870cmxjrny8yc.gif border=0></marquee>
+<marquee behavior=scroll direction=down scrollamount=3 scrolldelay=32 height=639 style='position:absolute; left:13%; top:71px; width:17; height:639px;'><img src=http://dl10.glitter-graphics.net/pub/72/72870cmxjrny8yc.gif border=0></marquee>
+<marquee behavior=scroll direction=down scrollamount=2 scrolldelay=12 height=579 style='position:absolute; left:45%; top:115px; width:17; height:579px;'><img src=http://dl10.glitter-graphics.net/pub/72/72870cmxjrny8yc.gif border=0></marquee>
+<marquee behavior=scroll direction=down scrollamount=4 scrolldelay=9 height=572 style='position:absolute; left:70%; top:122px; width:17; height:572px;'><img src=http://dl10.glitter-graphics.net/pub/72/72870cmxjrny8yc.gif border=0></marquee>
+<marquee behavior=scroll direction=down scrollamount=3 scrolldelay=27 height=528 style='position:absolute; left:35%; top:58px; width:17; height:528px;'><img src=http://dl10.glitter-graphics.net/pub/72/72870cmxjrny8yc.gif border=0></marquee>
+<marquee behavior=scroll direction=down scrollamount=4 scrolldelay=28 height=526 style='position:absolute; left:23%; top:101px; width:17; height:526px;'><img src=http://dl10.glitter-graphics.net/pub/72/72870cmxjrny8yc.gif border=0></marquee>
+<marquee behavior=scroll direction=down scrollamount=3 scrolldelay=44 height=540 style='position:absolute; left:70%; top:101px; width:17; height:540px;'><img src=http://dl10.glitter-graphics.net/pub/72/72870cmxjrny8yc.gif border=0></marquee>
+<marquee behavior=scroll direction=down scrollamount=3 scrolldelay=13 height=507 style='position:absolute; left:43%; top:129px; width:17; height:507px;'><img src=http://dl10.glitter-graphics.net/pub/72/72870cmxjrny8yc.gif border=0></marquee>
+<marquee behavior=scroll direction=down scrollamount=5 scrolldelay=39 height=577 style='position:absolute; left:91%; top:105px; width:17; height:577px;'><img src=http://dl10.glitter-graphics.net/pub/72/72870cmxjrny8yc.gif border=0></marquee>
+<marquee behavior=scroll direction=down scrollamount=4 scrolldelay=50 height=618 style='position:absolute; left:68%; top:140px; width:17; height:618px;'><img src=http://dl10.glitter-graphics.net/pub/72/72870cmxjrny8yc.gif border=0></marquee>
+<marquee behavior=scroll direction=down scrollamount=5 scrolldelay=18 height=606 style='position:absolute; left:29%; top:35px; width:17; height:606px;'><img src=http://dl10.glitter-graphics.net/pub/72/72870cmxjrny8yc.gif border=0></marquee>
+</div>
+
+        <div id="header-full"></div>
+        <div id="navbar-full" style="display: none;">
+            <ul class="nav">
+                <!--my navbar is not here-->
+            </ul>
+        </div>
+		
+
+		
+        <div id="main-container">
+		
+		<img style=" 
+		position: fixed;
+		left: 100px;
+		height: 514px;
+		top: -41px;" 
+		src="../images/napocute2.png">		
+
+		<img style=" 
+		position: fixed;
+		left: 218px;
+		height: 500;
+		top: 184px;" 
+		src="../images/napocute.png">
+		
+
+		
+            <div id="header-contained"></div>
+            <div id="navbar-contained" style="display: none;">
+                <ul class="nav">
+                     <!--my navbar is not here-->
+                </ul>
+            </div>		
+			
+            <div class="content-wrap flex alignment">
+                <div id="left-sidebar" style="display: block;">
+                    <div class="sidebar-wrapper">
+					<ul class="nav">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Fanarts</a></li>
+						<li><a href="#">Fanfics</a></li>
+						<li><a href="#">Ships</a></li>
+						
+					</ul>
+
+					</div>
+				
+                </div>
+				
+				
+                <iframe id="content-container" src="napohome.html" scrolling="yes" style="flex-grow: 1;">
+                    <div class="wrapper"><!--I use iframes here so there's no text here--></div>
+                </iframe>
+				
+				<!-- i dont use the right sidebar-->
+                <div id="right-sidebar" style="display: none;">
+                    <div class="sidebar-wrapper">
+                    </div>
+                </div>
+            </div>
+            <div id="footer" style="display: block;">
+			
+                <div class="footer-wrapper">footer</div>
+            </div>
+        </div>
+		
+		
+
+</body>
+   
