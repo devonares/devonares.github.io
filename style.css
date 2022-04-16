@@ -1,8 +1,6 @@
 @font-face {
   font-family: "munro";
   src: url("fonts/munro.ttf");
-  src: url("fonts/munro-narrow.ttf");
-  src: url("fonts/munro-small.ttf");
 }
 
 html, body {
