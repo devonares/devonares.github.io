@@ -3,14 +3,34 @@
   src: url("../fonts/munro.ttf");
 }
 
+@font-face {
+	font-family: "FreePixel";
+	src: url("../fonts/FreePixel.ttf");
+}
+
 
 html, body {
-	font-family: "munro";
+	font-family: "FreePixel";
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
 	background-image: url("../images/backgrounds/starsss.png");
 	background-repeat: repeat;
 
+}
+
+a:link {
+	color: coral;
+	text-decoration: none;
+  }
+
+a:visited { 
+	color: rgb(133, 80, 255);
+	text-decoration: none; 
+}
+
+a:hover { 
+	color: white;
+	text-decoration: none; 
 }
 
 body span{
@@ -19,4 +39,13 @@ body span{
 
 span img{
 	max-width: 400px;
+}
+
+.artworks {
+	display: table;
+	align-content: center;
+}
+.artworks img{
+	width: 50%;
+	max-width: 2000px;
 }

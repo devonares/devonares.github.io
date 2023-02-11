@@ -3,6 +3,11 @@
   src: url("fonts/munro.ttf");
 }
 
+@font-face {
+	font-family: "FreePixel";
+	src: url("fonts/FreePixel.ttf");
+}
+
 html, body {
 	font-family: "munro";
 	-ms-text-size-adjust: 100%;
@@ -82,7 +87,7 @@ h1 {
 }
 
 .nav ul {
-  list-style-type: none;
+  list-style-type: square;
   margin: auto;
   padding-left: 20px;
   padding-right: 20px;
@@ -163,9 +168,22 @@ a:active {
 	}
 	.nav {
 		padding: 10px;
-		max-width: 100%;
+		width: 100%;
 		margin: 10px;
+		box-sizing: border-box;
 	}
+
+	.nav ul{
+		list-style-type: none;
+		display: flex;
+		flex-wrap: wrap;
+		width: auto;
+	}
+
+	.nav li a {
+		padding: 5px;
+		text-decoration: underline;
+	  }
 	
 	.blinkietime{
 		margin-top: 20px;
@@ -179,5 +197,14 @@ a:active {
 	}
 	.buttonstime{
 		display: none;
+	}
+
+	.rightwindow {
+		width: 100%;
+		box-sizing: border-box;
+		padding: auto;
+	}
+	.rightwindow iframe {
+		margin: auto;
 	}
 }

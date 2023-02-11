@@ -4,12 +4,17 @@
 		font-family: "munro";
 		src: url("../fonts/munro.ttf");
 		}
+
+        @font-face {
+	    font-family: "FreePixel";
+	    src: url("../fonts/FreePixel.ttf");
+        }
 		
             :root {
                 /* These variables exist so you can make quick and simple style changes without much CSS knowledge */
 
                 /* applies to all areas */
-                --font-family: "munro";
+                --font-family: "FreePixel";
                 --font-size: 14px;
                 --line-height: 1.3em;
                 --font-color: white;
@@ -278,10 +283,10 @@
                 <div id="left-sidebar" style="display: block;">
                     <div class="sidebar-wrapper">
 					<ul class="nav">
-						<li><a href="#">Home</a></li>
-						<li><a href="#">Fanarts</a></li>
-						<li><a href="#">Fanfics</a></li>
-						<li><a href="#">Ships</a></li>
+						<li><a target="napoframe" href="napohome.html">Home</a></li>
+						<li><a target="napoframe" href="napofanart.html">Fanarts</a></li>
+						<li><a target="napoframe" href="napofics.html">Fanfics</a></li>
+						<li><a target="napoframe" href="napoships.html">Ships</a></li>
 						
 					</ul>
 
@@ -290,7 +295,7 @@
                 </div>
 				
 				
-                <iframe sandbox="allow-same-origin" id="content-container" src="napohome.html" scrolling="yes" style="flex-grow: 1;">
+                <iframe sandbox="allow-same-origin allow-top-navigation-by-user-activation" id="content-container" src="napohome.html" name="napoframe" scrolling="yes" style="flex-grow: 1;">
                     <div class="wrapper"><!--I use iframes here so there's no text here--></div>
                 </iframe>
 				

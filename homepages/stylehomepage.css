@@ -3,6 +3,11 @@
   src: url("../fonts/munro.ttf");
 }
 
+@font-face {
+	font-family: "FreePixel";
+	src: url("../fonts/FreePixel.ttf");
+}
+
 body {
 	font-family: "munro";
 	-ms-text-size-adjust: 100%;
