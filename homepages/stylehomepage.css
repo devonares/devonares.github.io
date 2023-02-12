@@ -45,7 +45,7 @@ a:link {
 
 a:visited {
   text-decoration: none;
-  color: black;
+  color: rgb(239, 139, 0);
 }
 
 a:hover {
@@ -54,4 +54,8 @@ a:hover {
 
 a:active {
   color: white;
+}
+
+article {
+	text-align: left;
 }

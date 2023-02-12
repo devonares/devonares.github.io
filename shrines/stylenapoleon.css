@@ -13,8 +13,6 @@ html, body {
 	font-family: "FreePixel";
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
-	background-image: url("../images/backgrounds/starsss.png");
-	background-repeat: repeat;
 
 }
 
@@ -46,6 +44,8 @@ span img{
 	align-content: center;
 }
 .artworks img{
-	width: 50%;
+	box-shadow: 5px 5px 5px rgb(0, 0, 0);
+	margin-bottom: 5px;
+	width: 100%;
 	max-width: 2000px;
 }
